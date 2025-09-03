@@ -1,0 +1,23 @@
+---
+---
+<head>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+    {% include navbar.html %}
+    
+    <h1>{{ page.title }}</h1>
+
+    <p>
+    {{ page.date | date_to_string }}
+    {% assign author = site.authors | where: 'short_name', page.author | first %}
+    {% assign tag = site.tags | where: 'short_name', page.tag | first %}
+    {% if author %}
+        - <a href="{{ author.url }}">{{ author.name }}</a>
+        - <a href="{{ tag.url }}">{{ tag.name }}</a>
+    {% endif %}
+    </p>
+
+    {{ content }}
+
+</body>

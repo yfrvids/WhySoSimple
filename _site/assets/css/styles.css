@@ -1,0 +1,31 @@
+.current {
+  color: green;
+}
+
+table {
+  background-color: #ff0b30;
+  padding: 2px;
+  border: 1px solid black;
+}
+
+pre {
+  border-inline-start: 3px solid #ff0b30;
+}
+
+ul .tagsDePost .tagDePost {
+  color: #000000;
+}
+
+ul .tagsDePost .tagDePost::before {
+  content: "#";
+}
+
+ul .tituloPost {
+  list-style: none;
+}
+
+ul .tagsDePost {
+  list-style: none;
+}
+
+/*# sourceMappingURL=styles.css.map */
