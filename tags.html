@@ -2,14 +2,17 @@
 layout: default
 title: Tags
 ---
+<head>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
 <h1>Tags</h1>
 
-<ul>
+<ul class="titulotagsul">
   {% for tag in site.tags %}
     <li>
-      <h2><a href="{{ tag.url }}">{{ tag.name }}</a></h2>
+      <a href="{{ tag.url }}">{{ tag.name }}</a>
       <!--<h3>{{ tag.position }}</h3>-->
-      <p>{{ tag.content | markdownify }}</p>
+      <!--<p>{{ tag.content | markdownify }}</p>-->
     </li>
   {% endfor %}
 </ul>

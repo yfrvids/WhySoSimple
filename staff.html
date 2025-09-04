@@ -2,12 +2,15 @@
 layout: default
 title: Staff
 ---
+<head>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
 <h1>Staff</h1>
 
-<ul>
+<ul class="stafful">
   {% for author in site.authors %}
-    <li>
-      <h2><a href="{{ author.url }}">{{ author.name }}</a></h2>
+    <li class="tituloauthorstaff">
+      <a href="{{ author.url }}">{{ author.name }}</a>
       <h3>{{ author.position }}</h3>
       <p>{{ author.content | markdownify }}</p>
     </li>
