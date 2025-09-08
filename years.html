@@ -1,16 +1,16 @@
 ---
 layout: default
-title: Tags
+title: Years
 ---
 <head>
     <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
-<h1>Tags</h1>
+<h1>Years</h1>
 
 <ul class="titulotagsul">
-  {% for tag in site.tags %}
+  {% for year in site.years %}
     <li>
-      <a href="{{ tag.url }}">{{ tag.name }}</a>
+      <a href="{{ year.url }}">{{ year.name }}</a>
       <!--<h3>{{ tag.position }}</h3>-->
       <!--<p>{{ tag.content | markdownify }}</p>-->
     </li>

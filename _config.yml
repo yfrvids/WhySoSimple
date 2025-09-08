@@ -3,6 +3,8 @@ collections:
     output: true
   tags:
     output: true
+  years:
+    output: true
 
 defaults:
   - scope:
@@ -20,6 +22,11 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+  - scope:
+      path: ""
+      type: "years"
+    values:
+      layout: "year"
   - scope:
       path: ""
     values:
