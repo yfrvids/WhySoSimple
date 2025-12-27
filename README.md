@@ -1,10 +1,28 @@
 ## Iniciar un proyecto ya creado
 
-1. Instalar prerequisitos dependiendo el sistema operativo
+### 1. Instalar prerequisitos dependiendo el sistema operativo
 
-2. Dentro de la carpeta del proyecto ejecutar el comando `bundle install`
+#### Arch Linux
 
-3. Iniciar servidor para continuar editando el proyecto mediante el comando `bundle exec jekyll serve`
+- Instalar `sudo pacman -S ruby base-devel ruby-erb`
+
+- Instalar `gem install jekyll bundler`
+
+- Agregar la variable al PATH en al archivo `.profile` o `.bash_profile`
+
+```sh
+export GEM_HOME="$HOME/.local/share/gem/ruby/versionDelRuby"
+export GEM_PATH="$GEM_HOME"
+export PATH="$GEM_HOME/bin:$PATH"
+```
+
+Aplicar la $GEM_HOME mediante el comando `source ~/.profile` o `source ~/.bash_profile` (dependiendo el archivo en donde se agrego en el paso anterior)
+
+### 2. Dentro de la carpeta del proyecto ejecutar el comando `bundle install`
+
+### 3. Iniciar servidor para continuar editando el proyecto mediante el comando `bundle exec jekyll serve`
+
+---
 
 ## ¿Como es el formato de fecha para nombrar un archivo de post?
 
