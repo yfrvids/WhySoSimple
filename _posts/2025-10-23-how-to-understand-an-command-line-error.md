@@ -1,10 +1,9 @@
 ---
 layout: post
-author: yofre 
+author: admin
 tag:
     - commandline
 year: 2025
 ---
 
-sss
-Hola
+Articulo...
