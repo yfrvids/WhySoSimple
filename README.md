@@ -18,9 +18,11 @@ export PATH="$GEM_HOME/bin:$PATH"
 
 Aplicar la $GEM_HOME mediante el comando `source ~/.profile` o `source ~/.bash_profile` (dependiendo el archivo en donde se agrego en el paso anterior)
 
-### 2. Dentro de la carpeta del proyecto ejecutar el comando `bundle install`
+### 2. Clonar el repo
 
-### 3. Iniciar servidor para continuar editando el proyecto mediante el comando `bundle exec jekyll serve`
+### 3. Dentro de la carpeta clonada ejecutar el comando `bundle install`
+
+### 4. Iniciar servidor para continuar editando el proyecto mediante el comando `bundle exec jekyll serve`
 
 ---
 
