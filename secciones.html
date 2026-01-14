@@ -1,0 +1,92 @@
+---
+layout: default
+title: Aquí va el nombre de pestaña :)
+---
+
+<br>
+<h2>¿Cómo crear una sección y una página que muestre un único tag o etiqueta?</h2>
+
+Para comenzar a crear una sección en el navbar o barra de navegación que rediriga a una única página que contenga un único contenido (Ejemplo: una página que solo muestre los posts que pertenezcan a la etiqueta de <code>recetas</code>, o <code>deportes</code>) se debe recurrir primero a la creación del archivo de dicha sección (en teoría la nueva sección es una nueva página del sitio web) y dicha creación debe ser llevada a cabo en la raíz del proyecto con la extensión .html (Ejemplo: recetas.html, deportes.html, etc)<br><br>
+
+Dentro del archivo de sección recién creado, se debe agregar el siguiente contenido:<br><br>
+
+<code>
+    ---<br>
+    layout: default<br>
+    title: Titulo de la sección que se mostrará en la pestaña del navegador<br>
+    ---<br>
+</code><br>
+
+El valor de <code>layout:</code> deberá corresponder a una layout disponible en <code>_layouts</code> y que en teoria debe ser establecido para que dicha nueva sección cumpla con cierto diseño de página (Ejemplo: un <b>post</b> usa un diseño especifico para los posts, la sección de <b>about me</b> usa otro diseño de página distinto al de home, etc).<br><br>
+
+El valor de <code>title:</code> corresponde al nombre de la pestaña del navegador. Notese en este caso que en esta sección el nombre de la pestaña se llama: <b>Aquí va el nombre de pestaña :)</b><br><br>
+
+El segundo paso será adicionarle la logica que mostrará el contenido en especifico, aquel contenido que se desea que esté en la página o sección independiente.<br>
+
+
+{% raw %}
+<pre style="border-inline-start:0px;"><code>
+&lt;head&gt;
+    &lt;link rel="stylesheet" href="/assets/css/styles.css"&gt;
+&lt;/head&gt;
+
+&lt;h2&gt;Titulo de sección (por defecto: Posts)&lt;/h2&gt;
+
+{% for post in site.posts %}
+{% for tag in post.tags %}
+{% if tag == "yourtag" %}
+&lt;li class="tituloPost"&gt;
+  &lt;a href="{{ post.url }}"&gt;{{ post.title }}&lt;/a&gt;&lt;br&gt;
+    {{ post.date | date_to_string }}
+        {{ post.excerpt }}
+&lt;/li&gt;
+
+{% endif %}
+{% endfor %}
+{% endfor %}
+</code></pre>
+{% endraw %}
+
+<br>
+En donde lo más importante de este tema, será llevado a cabo agregando únicamente el tag o etiqueta entre parentesis en la siguiente linea:
+<code>
+{% raw %}
+{% if tag == "yourtag" %}
+{% endraw %}
+</code>
+Recuerda que "yourtag1" debe corresponder a un tag o etiqueta real ubicado en <code>_tags</code> y que su "invocación" sea la misma del nombre de archivo.
+
+<br><br>
+
+El tercer paso será recurrir al archivo <code>_data/navbar.yml</code> y determinarle los siguientes valores que establecerán tanto el nombre de la sección a mostrar en el navbar o barra de navegación, como el link al cual debe redirigirse (Ejemplo: Una sección llamada <b>Deportes</b> deberá redirigir a su respectiva página recién creada en la raíz del proyecto, en este caso: <code>deportes.html</code>)<br><br>
+
+Por lo tanto los valores anteriormente mencionados deben ser agregados de la siguiente manera:<br><br>
+
+<code>
+    - name: Nombre de la sección<br>
+    - link: /paginareciencreadacorrespondientealaseccion<br>
+</code><br>
+
+
+El valor <code>name:</code> deberá correponder al nombre que se le quiera dar a la sección, dicho nombre es el que será mostrado en la barra de navegación (Ejemplo: Deportes, Cocina, Sobre mi)<br><br>
+
+El valor <code>link:</code> deberá principalmente iniciar con un slash (/) e ir seguido del archivo recién creado en la raíz del proyecto (Ejemplo: /deportes.html, /recetas.html, /sobremi.html, etc)<br><br>
+
+<code>Nota: Los estilos globales se encuentran en <b>_sass/main.scss</b></code> (No tenían nada que ver aquí pero no sabía en donde mencionarlos :) )
+
+<br><hr><br>
+
+
+<head>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+
+Preview:
+
+<h2>Posts</h2>
+
+<li class="tituloPost">
+  <a href="/secciones.html">Como crear una sección</a><br>
+      12 Jan 2026<br><br>
+        Contenido del post...
+</li>
