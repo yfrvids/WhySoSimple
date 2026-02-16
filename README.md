@@ -63,7 +63,7 @@ Nota: La documentación adicional y completa se encuentra en el mismo repo, solo
 <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
 ```
 
-1) Este primero en la etiqueta <head></head> del sitio en donde será ubicado, ya que permitirá el uso de estilos css predeterminados de Pagefind.
+1) Este primero en la etiqueta `<head></head>` del sitio en donde será ubicado, ya que permitirá el uso de estilos css predeterminados de Pagefind.
 
 ```html
 <script src="/pagefind/pagefind-ui.js"></script>
