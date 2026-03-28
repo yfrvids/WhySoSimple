@@ -2,7 +2,8 @@ Antes de llevar a cabo el proceso de instalación, puedes echarle un vistazo a c
 
 ## 1. Instalar jekyll
 
-Visita la página [https://jekyllrb.com/docs/installation/](https://jekyllrb.com/docs/installation/) para llevar a cabo una instalación adecuada dependiendo tu sistema operativo.
+- Linux(Debian):
+    - Install from Synaptic `jekyll`, `ruby-em-websocket`, `ruby-jekyll-sass-converter`, `ruby-jekyll-watch`, `ruby-pathutil` (For avoid the error "bundler: command not found: jekyll")
 
 ### Inicio rapido de instalación en Arch Linux
 
