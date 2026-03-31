@@ -4,6 +4,9 @@ Antes de llevar a cabo el proceso de instalación, puedes echarle un vistazo a c
 
 - Linux(Debian):
     - Install from Synaptic `jekyll`, `ruby-em-websocket`, `ruby-jekyll-sass-converter`, `ruby-jekyll-watch`, `ruby-pathutil` (For avoid the error "bundler: command not found: jekyll")
+ 
+- Linux (Fedora):
+    - Install `sudo dnf install rubygem-jekyll rubygem-em-websocket rubygem-jekyll-sass-converter rubygem-jekyll-watch rubygem-pathutil`
 
 ### Inicio rapido de instalación en Arch Linux
 
@@ -26,6 +29,16 @@ Antes de llevar a cabo el proceso de instalación, puedes echarle un vistazo a c
 - Instalar Npm **`sudo apt install npm -y`**
 
 - Instalar Nodejs **`sudo apt install nodejs -y`**
+
+#### Instalar (Fedora):
+
+- Instalar **`sudo dnf install ruby ruby-devel gcc gcc-c++ make`**
+
+- Instalar EN RAÍZ **`sudo gem install jekyll bundler`**
+
+- Instalar Bundle **`sudo dnf install rubygem-bundler`**
+
+- Instalar NodeJs y Npm **`sudo dnf install nodejs npm`**
 
 ---
 
