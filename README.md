@@ -42,7 +42,7 @@ Antes de llevar a cabo el proceso de instalación, puedes echarle un vistazo a c
 
 ---
 
-Agregar la variable al PATH en al archivo `.profile` o `.bash_profile`
+#### (NOT for Fedora) Agregar la variable al PATH en al archivo `.profile` o `.bash_profile`
 
 ```sh
 export GEM_HOME="$HOME/.local/share/gem/ruby/versionDelRuby"
