@@ -8,6 +8,9 @@ Antes de llevar a cabo el proceso de instalación, puedes echarle un vistazo a c
 - Linux (Fedora):
     - Install `sudo dnf install rubygem-jekyll rubygem-em-websocket rubygem-jekyll-sass-converter rubygem-jekyll-watch rubygem-pathutil`
 
+- Linux (AlmaLinux)
+    - Install `sudo dnf install ruby ruby-devel gcc g++ make redhat-rpm-config`
+
 ### Inicio rapido de instalación en Arch Linux
 
 #### Instalar (Arch Linux):
@@ -40,9 +43,13 @@ Antes de llevar a cabo el proceso de instalación, puedes echarle un vistazo a c
 
 - Instalar NodeJs y Npm **`sudo dnf install nodejs npm`**
 
+#### Instalar (AlmaLinux):
+
+- Instalar en RAÍZ **`gem install jekyll bundler`**
+
 ---
 
-#### (NOT for Fedora) Agregar la variable al PATH en al archivo `.profile` o `.bash_profile`
+#### (NOT for Fedora, NOT for AlmaLinux) Agregar la variable al PATH en al archivo `.profile` o `.bash_profile`
 
 ```sh
 export GEM_HOME="$HOME/.local/share/gem/ruby/versionDelRuby"
@@ -58,7 +65,17 @@ Aplicar la `$GEM_HOME` en la terminal mediante el comando **`source ~/.profile`*
 
 ## 3. Instalar las bundler gems
 
+### General:
+
 Dentro de la carpeta de tu proyecto (o dentro de la carpeta de este repo clonada en tu sistema) ejecuta el comando `bundle install` en la terminal.
+
+#### For AlmaLinux:
+
+- `mkdir vendor`
+
+- `mkdir vendor/bundle`
+
+- **`bundle install --path vendor/bundle/`**
 
 ## 4. Iniciar servidor local web
 
