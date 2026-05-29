@@ -5,6 +5,7 @@ author: yourShortName
 tag:
     - yourtag1
 year: 2026
+description: Esta descripción se puede cambiar como parametro dentro de cada post en la "variable" yaml de description
 ---
 
 El **nombre de archivo** es el que principalmente determina tanto la fecha en que el post fue publicado como el nombre del post, por lo tanto el formato para ello se basa en el siguiente: **`año-numeroDeMes-numeroDeDia-titulo-del-post-o-nombre-del-post.md`**. Pero, en caso de necesitar titulos acentuados, o necesitar titulos sin cambiar todo el nombre del archivo, puede especificarse en la sección de variables de cada post, la variable `title: Nombre nuevo al post`. (Puedes revisar que este post tiene un titulo con caracteres especiales como **`¿`** y **`?`**, pero no son permitidos como nombre de archivo, por lo tanto se hace uso de dicha variable `title:`)
