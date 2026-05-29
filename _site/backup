@@ -1,0 +1,15 @@
+#!/bin/bash
+
+mkdir backupWSS ~/
+
+cp -r _authors/ ~/backupWSS
+
+cp -r _tags/ ~/backupWSS
+
+cp -r assets/ ~/backupWSS
+
+cp -r _posts/ ~/backupWSS 
+
+cp -r _years/ ~/backupWSS 
+
+cp -r _authors/ ~/backupWSS

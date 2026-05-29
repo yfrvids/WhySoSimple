@@ -1,5 +1,13 @@
 Antes de llevar a cabo el proceso de instalación, puedes echarle un vistazo a como se vería tu web estática con Jekyll y WhySoSimple mediante este link: [https://whysosimple-jekylltemplate.vercel.app/](https://whysosimple-jekylltemplate.vercel.app/)
 
+✅ Last Update!!!
+
+> Back up your assets, authors, posts, and tags in case you decide to switch templates or platforms, so you can retain control over your content wherever you go.
+
+Run the 'backup' file
+
+You can find this backup folder in your root directory under the name backupWSS
+
 ## 1. Instalar jekyll
 
 - Linux(Debian):
